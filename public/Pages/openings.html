@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Openings</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../Styles/Ocss.css">
+        <link rel="stylesheet" href="../Styles/footer.css">
+        <link rel="icon" type="image/png" href="../Icons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="../Icons/favicon.svg" />
+		<link rel="shortcut icon" href="../Icons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../Icons/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="chesswebsitemadebyleb" />
+		<link rel="manifest" href="../Icons/site.webmanifest" />
+    </head>
+<body>
+    <a class="back-btn" href="mainpage.html" onclick="if(history.length>1){history.back(); return false;}" aria-label="Go back"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>OPENING</h3>
+                    <p>The opening is the initial stage of a chess game. It usually consists of established theory. The other phases are the middlegame and the endgame.</p>
+                </div>
+                <div class="image">
+                    <img src="../Pictures/how-to-learn-chess-openings.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>E4</h3>
+                    <p>E4, the King's Pawn Opening, is the most popular first move at all levels of the game and was the favorite opening move of world champion Bobby Fischer, who called it 'best by test. White's assertive opening move opens lines for the queen and the king's bishop (a good thing to do).</p>
+                    <a href="../Pages/E4.html" class="btn">learn</a>
+                </div>
+                <div class="image">
+                    <img src="../Pictures/E4.png">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>D4</h3>
+                    <p>D4 (the queen's pawn opening) is the most popular opening move to a chess game. D4 is not an opening on its own, it does lead to a group of potential openings and games that are generally recognizable by the following characteristics: A solid centre for White. A closed position.</p>
+                    <a href="../Pages/E4.html" class="btn">learn</a>
+                </div>
+                <div class="image">
+                    <img src="../Pictures/D4.png">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>Modern</h3>
+                    <p>The Modern Defense is a hypermodern chess opening in which Black allows White to occupy the center with pawns on d4 and e4, then proceeds to attack and undermine this "ideal" center without attempting to occupy it.</p>
+                    <a href="../Pages/E4.html" class="btn">learn</a>
+                </div>
+                <div class="image">
+                    <img src="../Pictures/modern.png">
+                </div>
+            </div>
+        </div>
+        <div id="prev" onclick="prev()"> < </div>
+        <div id="next" onclick="next()"> > </div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prev() {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+        setInterval(next, 7000);
+    </script>
+</body>
+</html>

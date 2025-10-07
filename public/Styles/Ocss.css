@@ -1,0 +1,119 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+.container {
+    position: relative;
+}
+.container .slide-container .slide {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+}
+.container .slide-container .slide .content {
+    flex: 1 1 350px;
+    animation: slideContent .4s linear .6s backwards;
+}
+@keyframes slideContent {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+.container .slide-container .slide .image {
+    flex: 1 1 500px;
+}
+.container .slide-container .slide .image img {
+    width: 100%;
+    animation: slideImage .4s linear;
+}
+@keyframes slideImage {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+.container .slide-container .slide .content h3 {
+    font-size: 36px;
+    color: #222;
+    letter-spacing: 0.3px;
+}
+.container .slide-container .slide .content p {
+    font-size: 17px;
+    color: #444;
+    padding: 10px 0;
+    line-height: 1.6;
+}
+.container .slide-container .slide .content .btn {
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 28px;
+    border-radius: 32px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.container .slide-container .slide .content .btn:hover {
+    background: #000;
+}
+.container .slide-container {
+    display: none;
+}
+.container .slide-container.active {
+    display: block;
+}
+.container .slide-container:nth-child(1) .slide {
+    background: linear-gradient(90deg,#f9f9f9 70%, #E5C981 30.1%);
+}
+.container .slide-container:nth-child(2) .slide {
+    background: linear-gradient(90deg,#f9f9f9 70%, #B48763 30.1%);
+}
+.container .slide-container:nth-child(3) .slide {
+    background: linear-gradient(90deg,#f9f9f9 70%, #B48763 30.1%);
+}
+.container .slide-container:nth-child(4) .slide {
+    background: linear-gradient(90deg,#f9f9f9 70%, #B48763 30.1%);
+}
+.container #prev,
+.container #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.container #prev:hover,
+.container #next:hover {
+    background: #000;
+}
+.container #prev {
+    left: 20px;
+}
+.container #next {
+    right: 20px;
+}
+@media (max-width:500px){
+    .container #prev {
+        left: 0px;
+        top: 60%;
+    }
+    .container #next {
+        right: 0px;
+        top: 60%;
+    }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tournament</title>
+        <link rel="icon" href="../Icons/cp1.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../Styles/footer.css">
+        <style>
+        * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        }
+        body {
+            background-color: coral;
+            padding: 20px;
+        }
+        .heading {
+            color: #444;
+            font-size: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .container .main-video-container {
+            flex: 1 1 700px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+        .container .main-video-container .main-video {
+            margin-bottom: 7px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .container .main-video-container .main-vid-title {
+            font-size: 20px;
+            color: #444;
+        }
+        .container .video-list-container {
+            flex: 1 1 350px;
+            height: 485px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+        .container .video-list-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .container .video-list-container::-webkit-scrollbar-track {
+            background-color: #fff;
+            border: 5px;
+        }
+        .container .video-list-container::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border: 5px;
+        }
+        .container .video-list-container .list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .container .video-list-container .list:last-child {
+            margin-bottom: 0;
+        }
+        .container .video-list-container .list.active {
+            background-color: #444;
+        }
+        .container .video-list-container .list.active .list-title {
+            color: #fff;
+        }
+        .container .video-list-container .list .list-video {
+            width: 100px;
+            border-radius: 5px;
+        }
+        .container .video-list-container .list .list-title {
+            font-size: 17px;
+            color: #444;
+        }
+        @media (max-width:1200px){
+            .container {
+                margin: 0;
+            }
+        }
+        @media (max-width:450px){
+            .container .main-video-container .main-vid-title {
+                font-size: 15px;
+                text-align: center;
+            }
+            .container .video-list-container .list {
+                flex-flow: column;
+                gap: 10px;
+            }
+            .container .video-list-container .list .list-video {
+                width: 100%;
+            }
+            .container .video-list-container .list .list-title {
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        </style>
+    </head>
+<body>
+    <a class="back-btn" href="mainpage.html" onclick="if(history.length>1){history.back(); return false;}" aria-label="Go back"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    <h1 class="heading">Tournaments</h1>
+    <div class="container">
+        <div class="main-video-container">
+            <video src="../vid/When arch rivals meet- Magnus Carlsen vs Hikaru Nakamura.mp4" loop controls class="main-video"></video>
+            <h3 class="main-vid-title">Magnus Carlsen vs Hikaru Nakamura</h3>
+        </div>
+        <div class="video-list-container">
+            <div class="list active">
+                <video src="../vid/When arch rivals meet- Magnus Carlsen vs Hikaru Nakamura.mp4" class="list-video"></video>
+                <h3 class="list-title">Magnus Carlsen vs Hikaru Nakamura</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/The Great American Dream Hikaru Nakamura vs Wesley So Tata Steel Chess India Rapid 2022.mp4" class="list-video"></video>
+                <h3 class="list-title">Hikaru Nakamura vs Wesley So</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/The game that made Magnus Carlsen the World Rapid Champion 2019.mp4" class="list-video"></video>
+                <h3 class="list-title">Magnus Carlsen vs Hikaru Nakamura</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/The GAME Made Magnus Carlsen World Blitz Chess Champion in 2022.mp4" class="list-video"></video>
+                <h3 class="list-title">Magnus Carlsen vs Abdusattorov</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/The FINAL GAME of the 2023 World Chess Championship - Ian Nepomniachtchi vs Ding Liren.mp4" class="list-video"></video>
+                <h3 class="list-title">Ian Nepomniachtchi vs Ding Liren</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Norway Blitz Chess Tournament_ Carlsen vs Nakamura.mp4" class="list-video"></video>
+                <h3 class="list-title">Magnus Carlsen vs Hikaru Nakamura</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/NICE CHECKMATE!! Wesley So vs Magnus Carlsen Norway Chess 2022 - R2.mp4" class="list-video"></video>
+                <h3 class="list-title">Wesley So vs Magnus Carlsen</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Magnus Carlsen vs Alireza Firouzja Full Game Watch until the end World Rapid 2021.mp4" class="list-video"></video>
+                <h3 class="list-title">Magnus Carlsen vs Alireza Firouzja</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Hikaru Nakamura vs Garry Kasparov - St Louis Blitz 2017.mp4" class="list-video"></video>
+                <h3 class="list-title">Hikaru Nakamura vs Garry Kasparov</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Anatoly Karpov VS Eugenio Torre 2018! Tournament of Legends (Platja d'Aro).mp4" class="list-video"></video>
+                <h3 class="list-title">Anatoly Karpov VS Eugenio Torre</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let videoList = document.querySelectorAll('.video-list-container .list');
+        videoList.forEach(vid =>{
+            vid.onclick = () =>{
+                videoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.main-video-container .main-video').src = src;
+                document.querySelector('.main-video-container .main-video').play();
+                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+    </script>
+</body>
+</html>

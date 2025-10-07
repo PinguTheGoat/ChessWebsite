@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E4 Opening</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../Styles/footer.css">
+        <link rel="icon" type="image/png" href="../Icons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="../Icons/favicon.svg" />
+		<link rel="shortcut icon" href="../Icons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../Icons/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="chesswebsitemadebyleb" />
+		<link rel="manifest" href="../Icons/site.webmanifest" />
+        <style>
+        * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        }
+        body {
+            background-color: coral;
+            padding: 20px;
+        }
+        .heading {
+            color: #444;
+            font-size: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .container .main-video-container {
+            flex: 1 1 700px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+        .container .main-video-container .main-video {
+            margin-bottom: 7px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .container .main-video-container .main-vid-title {
+            font-size: 20px;
+            color: #444;
+        }
+        .container .video-list-container {
+            flex: 1 1 350px;
+            height: 485px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+        .container .video-list-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .container .video-list-container::-webkit-scrollbar-track {
+            background-color: #fff;
+            border: 5px;
+        }
+        .container .video-list-container::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border: 5px;
+        }
+        .container .video-list-container .list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .container .video-list-container .list:last-child {
+            margin-bottom: 0;
+        }
+        .container .video-list-container .list.active {
+            background-color: #444;
+        }
+        .container .video-list-container .list.active .list-title {
+            color: #fff;
+        }
+        .container .video-list-container .list .list-video {
+            width: 100px;
+            border-radius: 5px;
+        }
+        .container .video-list-container .list .list-title {
+            font-size: 17px;
+            color: #444;
+        }
+        @media (max-width:1200px){
+            .container {
+                margin: 0;
+            }
+        }
+        @media (max-width:450px){
+            .container .main-video-container .main-vid-title {
+                font-size: 15px;
+                text-align: center;
+            }
+            .container .video-list-container .list {
+                flex-flow: column;
+                gap: 10px;
+            }
+            .container .video-list-container .list .list-video {
+                width: 100%;
+            }
+            .container .video-list-container .list .list-title {
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        </style>
+    </head>
+<body>
+    <a class="back-btn" href="mainpage.html" onclick="if(history.length>1){history.back(); return false;}" aria-label="Go back"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    <h1 class="heading">E4 OPENING</h1>
+    <div class="container">
+        <div class="main-video-container">
+            <video src="../vid/The Sicilian Defense 10-Minute Chess Openings.mp4" loop controls class="main-video"></video>
+            <h3 class="main-vid-title">Sicilian Defense</h3>
+        </div>
+        <div class="video-list-container">
+            <div class="list active">
+                <video src="../vid/Crush the French Defense [Deadly TRAP to Win in 10 Moves].mp4" class="list-video"></video>
+                <h3 class="list-title">French Defense</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Chess Openings_ Ruy Lopez Ideas Theory and Attacking Plans.mp4" class="list-video"></video>
+                <h3 class="list-title">Ruy Lopez Opening</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Learn the Caro-Kann Defense 10-Minute Chess Openings.mp4" class="list-video"></video>
+                <h3 class="list-title">Caro-Kann Defense</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Learn the Italian Game in 20 Minutes [Chess Opening Crash Course].mp4" class="list-video"></video>
+                <h3 class="list-title">Italian Game</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/Crush the Scandinavian Defense in 8 Moves! [TRAPS for White].mp4" class="list-video"></video>
+                <h3 class="list-title">Scandinavian Defense</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/King's Gambit_ Chess Opening Strategy Moves & Ideas to WIN More Games Accepted Variation.mp4" class="list-video"></video>
+                <h3 class="list-title">King's Gambit</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/WIN WITH 1. E4 The Vienna Gambit.mp4" class="list-video"></video>
+                <h3 class="list-title">Vienna Gambit</h3>
+            </div>
+            <div class="list">
+                <video src="../vid/The Sicilian Defense 10-Minute Chess Openings.mp4" class="list-video"></video>
+                <h3 class="list-title">Sicilian Defense</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let videoList = document.querySelectorAll('.video-list-container .list');
+        videoList.forEach(vid =>{
+            vid.onclick = () =>{
+                videoList.forEach(remove =>{remove.classList.remove('active')});
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.main-video-container .main-video').src = src;
+                document.querySelector('.main-video-container .main-video').play();
+                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+    </script>
+</body>
+</html>

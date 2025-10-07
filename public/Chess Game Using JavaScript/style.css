@@ -1,0 +1,20 @@
+.board {
+    width: 500px;
+    margin: auto
+}
+
+.info {
+    width: 400px;
+    margin: auto;
+}
+
+.move-history {
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+    .board{ width: 92vw; }
+    .info{ width: 92vw; padding: 0 8px; }
+}

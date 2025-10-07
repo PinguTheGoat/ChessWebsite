@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rate</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="icon" type="image/png" href="../Icons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="../Icons/favicon.svg" />
+		<link rel="shortcut icon" href="../Icons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../Icons/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="chesswebsitemadebyleb" />
+		<link rel="manifest" href="../Icons/site.webmanifest" />
+        <style>
+            body {
+                background: #e2e1d9;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .back-btn{
+                position: fixed;
+                top: 16px;
+                left: 16px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 12px;
+                border-radius: 8px;
+                background: #111;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            }
+            .back-btn:hover{ background:#000; }
+            .rating {
+                display: inline-block;
+                font-size: 0;
+                position: relative;
+                text-transform: capitalize;
+                padding: 0 50px 8%;
+                color: gray;
+            }
+            label {
+                float: right;
+                padding: 0;
+                font-size: 90px;
+                cursor: pointer;
+            }
+            label::before {
+                content: "\2606";
+                padding-bottom: 8px;
+                display: inline-block;
+                transition: 0.2s;
+            }
+            span {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                height: 20px;
+                font-size: 2rem;
+                white-space: nowrap;
+                transition: 0.15s ease-out;
+                pointer-events: none;
+                letter-spacing: -2px;
+                transform: translateY(-50%);
+            }
+            label:hover span {
+                opacity: 1;
+                transform: none;
+                letter-spacing: 0;
+            }
+            input:checked ~ label::before {
+                content: "\2605";
+                color: orange;
+                filter: drop-shadow(0 0 4px);
+                transform: rotate(.2turn);
+                transition-delay: calc(0.1 * attr(data-idx integer));
+            }
+        </style>
+    </head>
+<body>
+    <a class="back-btn" href="mainpage.html" onclick="if(history.length>1){history.back(); return false;}" aria-label="Go back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back
+    </a>
+    <form>
+        <div class="rating">
+          <input type='radio' hidden name='rate' id='rating-opt5' data-idx='0'>	
+          <label for='rating-opt5'><span>Excellent</span></label>
+     
+          <input type='radio' hidden name='rate' id='rating-opt4' data-idx='1'>
+          <label for='rating-opt4'><span>Good</span></label>
+     
+          <input type='radio' hidden name='rate' id='rating-opt3' data-idx='2'>
+          <label for='rating-opt3'><span>Neutral</span></label>
+     
+          <input type='radio' hidden name='rate' id='rating-opt2' data-idx='3'>
+          <label for='rating-opt2'><span>Bad</span></label>
+     
+          <input type='radio' hidden name='rate' id='rating-opt1' data-idx='4'>
+          <label for='rating-opt1'><span>Worst</span></label>
+        </div>
+     </form>
+</body>
+</html>
